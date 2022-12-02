@@ -1,5 +1,8 @@
 const result = document.querySelector(".result");
 let myNumber = 0;
+let firstNumber = 0;
+let secondNumber = 0;
+let choiceNumber = 0;
 const numbers = {
   one: document.querySelector(".one"),
   two: document.querySelector(".two"),
@@ -20,26 +23,57 @@ const items = {
   equal: document.querySelector(".equal"),
   clear: document.querySelector(".clear"),
 };
-const operations = () => {
+const operationNumber = () => {
   numbers.one.addEventListener("click", () => {
-    myNumber = myNumber + 1;
+    firstNumber = 1;
   });
   numbers.two.addEventListener("click", () => {
-    myNumber = myNumber + 2;
+    firstNumber = 2;
   });
   numbers.three.addEventListener("click", () => {
-    myNumber = myNumber + 3;
+    firstNumber = 3;
   });
   numbers.four.addEventListener("click", () => {
-    myNumber = myNumber + 4;
+    firstNumber = 4;
   });
   numbers.five.addEventListener("click", () => {
-    myNumber = myNumber + 5;
+    firstNumber = 5;
   });
   numbers.six.addEventListener("click", () => {
-    myNumber = myNumber + 6;
+    firstNumber = 6;
+  });
+  numbers.seven.addEventListener("click", () => {
+    firstNumber = 7;
+  });
+  numbers.eight.addEventListener("click", () => {
+    firstNumber = 8;
+  });
+  numbers.nine.addEventListener("click", () => {
+    firstNumber = 9;
+  });
+  numbers.zero.addEventListener("click", () => {
+    firstNumber = 0;
   });
 };
-operations();
+const operationItems = () => {
+  items.multiplication.addEventListener("click", () => {
+    items.multiplication.classList.add("active");
+  });
+  items.division.addEventListener("click", () => {
+    items.division.classList.add("active");
+  });
+  items.add.addEventListener("click", () => {
+    items.add.classList.add("active");
+  });
+  items.subtract.addEventListener("click", () => {
+    items.subtract.classList.add("active");
+  });
+  items.equal.addEventListener("click", () => {
+    items.equal.classList.add("active");
+  });
+};
+operationItems();
+operationNumber();
 console.log(numbers);
 console.log(items);
+myNumber = choiceNumber;
