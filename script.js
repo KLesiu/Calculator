@@ -1,4 +1,4 @@
-// Zmienne
+// Variables
 const currentNumber = document.querySelector(".currentNumber");
 const previousNumber = document.querySelector(".previousNumber p");
 const mathSign = document.querySelector(".mathSign");
@@ -8,7 +8,7 @@ const operatorButtons = document.querySelectorAll(".operator");
 const clearButton = document.querySelector(".clear");
 let result = "";
 
-// Funkcje
+// Functions
 function displayNumbers() {
   if (this.textContent === "." && currentNumber.innerHTML.includes(".")) return;
   if (this.textContent === "." && currentNumber.innerHTML === "")
@@ -58,7 +58,7 @@ function clearScreen() {
   currentNumber.innerHTML = "";
   mathSign.innerHTML = "";
 }
-// Nasłuchiwanie przycisków
+// Add eventListeners
 operatorButtons.forEach((button) => button.addEventListener("click", operate));
 equalsButton.addEventListener("click", showResult);
 clearButton.addEventListener("click", clearScreen);
