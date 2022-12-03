@@ -60,7 +60,7 @@ main {
   width: 25%;
   height: 15%;
   margin-right: 2px;
-  margin-top: 2px;
+  margin-top: 1px;
   cursor: pointer;
   font-weight: 700;
 }
@@ -70,4 +70,8 @@ main {
   background-color: rgb(172, 15, 15);
 
   color: white;
+}
+.items .equals {
+  width: 60%;
+  background-color: rgb(80, 80, 80);
 }
