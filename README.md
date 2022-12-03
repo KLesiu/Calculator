@@ -1,2 +1,3 @@
 # Calculator
-I have not finished this project yet
+Finished I will write more information soon
+
