@@ -1,4 +1,5 @@
 const result = document.querySelector(".result");
+const item = document.querySelector(".items");
 let myNumber = 0;
 let firstNumber = 0;
 let secondNumber = 0;
@@ -25,34 +26,155 @@ const items = {
 };
 const operationNumber = () => {
   numbers.one.addEventListener("click", () => {
-    firstNumber = 1;
+    removeActive();
+    if (item.classList.contains("active")) {
+      firstNumber = 1;
+    }
+
+    if (items.add.classList.contains("active")) {
+      myNumber = firstNumber + 1;
+    } else if (items.multiplication.classList.contains("active")) {
+      myNumber = firstNumber * 1;
+    } else if (items.division.classList.contains("active")) {
+      myNumber = firstNumber / 1;
+    } else if (items.subtract.classList.contains("active")) {
+      myNumber = firstNumber - 1;
+    }
   });
   numbers.two.addEventListener("click", () => {
-    firstNumber = 2;
+    removeActive();
+    if (item.classList.contains("active")) {
+      firstNumber = 2;
+    }
+    if (items.add.classList.contains("active")) {
+      myNumber = firstNumber + 2;
+    } else if (items.multiplication.classList.contains("active")) {
+      myNumber = firstNumber * 2;
+    } else if (items.division.classList.contains("active")) {
+      myNumber = firstNumber / 2;
+    } else if (items.subtract.classList.contains("active")) {
+      myNumber = firstNumber - 2;
+    }
   });
   numbers.three.addEventListener("click", () => {
-    firstNumber = 3;
+    removeActive();
+    if (item.classList.contains("active")) {
+      firstNumber = 3;
+    }
+    if (items.add.classList.contains("active")) {
+      myNumber = firstNumber + 3;
+    } else if (items.multiplication.classList.contains("active")) {
+      myNumber = firstNumber * 3;
+    } else if (items.division.classList.contains("active")) {
+      myNumber = firstNumber / 3;
+    } else if (items.subtract.classList.contains("active")) {
+      myNumber = firstNumber - 3;
+    }
   });
   numbers.four.addEventListener("click", () => {
-    firstNumber = 4;
+    removeActive();
+    if (item.classList.contains("active")) {
+      firstNumber = 4;
+    }
+    if (items.add.classList.contains("active")) {
+      myNumber = firstNumber + 4;
+    } else if (items.multiplication.classList.contains("active")) {
+      myNumber = firstNumber * 4;
+    } else if (items.division.classList.contains("active")) {
+      myNumber = firstNumber / 4;
+    } else if (items.subtract.classList.contains("active")) {
+      myNumber = firstNumber - 4;
+    }
   });
   numbers.five.addEventListener("click", () => {
-    firstNumber = 5;
+    removeActive();
+    if (item.classList.contains("active")) {
+      firstNumber = 5;
+    }
+    if (items.add.classList.contains("active")) {
+      myNumber = firstNumber + 5;
+    } else if (items.multiplication.classList.contains("active")) {
+      myNumber = firstNumber * 5;
+    } else if (items.division.classList.contains("active")) {
+      myNumber = firstNumber / 5;
+    } else if (items.subtract.classList.contains("active")) {
+      myNumber = firstNumber - 5;
+    }
   });
   numbers.six.addEventListener("click", () => {
-    firstNumber = 6;
+    removeActive();
+    if (item.classList.contains("active")) {
+      firstNumber = 6;
+    }
+    if (items.add.classList.contains("active")) {
+      myNumber = firstNumber + 6;
+    } else if (items.multiplication.classList.contains("active")) {
+      myNumber = firstNumber * 6;
+    } else if (items.division.classList.contains("active")) {
+      myNumber = firstNumber / 6;
+    } else if (items.subtract.classList.contains("active")) {
+      myNumber = firstNumber - 6;
+    }
   });
   numbers.seven.addEventListener("click", () => {
-    firstNumber = 7;
+    removeActive();
+    if (item.classList.contains("active")) {
+      firstNumber = 7;
+    }
+    if (items.add.classList.contains("active")) {
+      myNumber = firstNumber + 7;
+    } else if (items.multiplication.classList.contains("active")) {
+      myNumber = firstNumber * 7;
+    } else if (items.division.classList.contains("active")) {
+      myNumber = firstNumber / 7;
+    } else if (items.subtract.classList.contains("active")) {
+      myNumber = firstNumber - 7;
+    }
   });
   numbers.eight.addEventListener("click", () => {
-    firstNumber = 8;
+    removeActive();
+    if (item.classList.contains("active")) {
+      firstNumber = 8;
+    }
+    if (items.add.classList.contains("active")) {
+      myNumber = firstNumber + 8;
+    } else if (items.multiplication.classList.contains("active")) {
+      myNumber = firstNumber * 8;
+    } else if (items.division.classList.contains("active")) {
+      myNumber = firstNumber / 8;
+    } else if (items.subtract.classList.contains("active")) {
+      myNumber = firstNumber - 8;
+    }
   });
   numbers.nine.addEventListener("click", () => {
-    firstNumber = 9;
+    removeActive();
+    if (item.classList.contains("active")) {
+      firstNumber = 9;
+    }
+    if (items.add.classList.contains("active")) {
+      myNumber = firstNumber + 9;
+    } else if (items.multiplication.classList.contains("active")) {
+      myNumber = firstNumber * 9;
+    } else if (items.division.classList.contains("active")) {
+      myNumber = firstNumber / 9;
+    } else if (items.subtract.classList.contains("active")) {
+      myNumber = firstNumber - 9;
+    }
   });
   numbers.zero.addEventListener("click", () => {
-    firstNumber = 0;
+    removeActive();
+    if (item.classList.contains("active")) {
+      firstNumber = 0;
+    }
+    if (items.add.classList.contains("active")) {
+      myNumber = firstNumber + 0;
+    } else if (items.multiplication.classList.contains("active")) {
+      myNumber = firstNumber * 0;
+    } else if (items.division.classList.contains("active")) {
+      myNumber = firstNumber / 0;
+    } else if (items.subtract.classList.contains("active")) {
+      myNumber = firstNumber - 0;
+    }
   });
 };
 const operationItems = () => {
@@ -72,8 +194,20 @@ const operationItems = () => {
     items.equal.classList.add("active");
   });
 };
+const removeActive = () => {
+  if (
+    items.multiplication.classList.contains("active") ||
+    items.division.classList.contains("active") ||
+    items.add.classList.contains("active") ||
+    items.subtract.classList.contains("active")
+  ) {
+    item.classList.remove("active");
+  }
+};
+
 operationItems();
+
 operationNumber();
+
 console.log(numbers);
 console.log(items);
-myNumber = choiceNumber;
