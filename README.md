@@ -1,5 +1,5 @@
 # Calculator
-#Finished.
+# Finished.
 ## Time: 1 day.
 ## New skills:
 - Learn how to use propety ,,this"
