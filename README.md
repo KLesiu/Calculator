@@ -1,6 +1,6 @@
 # Calculator
-# Finished.
-## Time: 1 day.
+
+## Work-time: 1 day.
 ## New skills:
 - Learn how to use propety ,,this"
 - Learn how to convert string to number(Propety Number())
